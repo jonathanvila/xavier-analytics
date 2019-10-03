@@ -38,7 +38,7 @@ rule "Copy basic fields and agenda controller"
         workloadInventoryReport.setProduct(vmWorkloadInventoryModel.getProduct());
         workloadInventoryReport.setVersion(vmWorkloadInventoryModel.getVersion());
         workloadInventoryReport.setHost_name(vmWorkloadInventoryModel.getHost_name());
-        workloadInventoryReport.setCreationDate(new Date());
+        workloadInventoryReport.setCreationDate(vmWorkloadInventoryModel.getScanRunDate());
 
         insert(workloadInventoryReport);
         kcontext.getKieRuntime().getAgenda().getAgendaGroup("Workloads").setFocus();

@@ -11,6 +11,8 @@ import org.kie.api.runtime.rule.QueryResults;
 import org.kie.api.runtime.rule.QueryResultsRow;
 import org.kie.internal.command.CommandFactory;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +34,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
     }
 
     @Test
-    public void testNoFlagsSupportedOS() {
+    public void testNoFlagsSupportedOS() throws ParseException {
         // check that the numbers of rule from the DRL file is the number of rules loaded
         checkLoadedRulesNumber();
 
@@ -53,6 +55,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         vmWorkloadInventoryModel.setProduct("VMware vCenter");
         vmWorkloadInventoryModel.setVersion("6.5");
         vmWorkloadInventoryModel.setHost_name("esx13.v2v.bos.redhat.com");
+        vmWorkloadInventoryModel.setScanRunDate(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"));
 
         //Flags
         vmWorkloadInventoryModel.setNicsCount(2);
@@ -132,6 +135,8 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_EASY,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
+
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
