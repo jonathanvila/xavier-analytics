@@ -22,7 +22,8 @@ rule "Copy basic fields and agenda controller"
             osProductName != null,
             product != null,
             version != null,
-            host_name != null
+            host_name != null,
+            scanRunDate != null
         )
     then
         WorkloadInventoryReportModel workloadInventoryReport =  new WorkloadInventoryReportModel();
