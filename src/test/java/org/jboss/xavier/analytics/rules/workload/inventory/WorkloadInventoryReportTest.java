@@ -123,6 +123,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNull(flagsIMS);
@@ -136,7 +137,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
 
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -229,6 +229,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNotNull(flagsIMS);
@@ -242,7 +243,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_MEDIUM,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -338,6 +338,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNotNull(flagsIMS);
@@ -352,7 +353,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_HARD,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -447,6 +447,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNull(flagsIMS);
@@ -460,7 +461,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_MEDIUM,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -555,6 +555,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertEquals(2, flagsIMS.size());
@@ -567,7 +568,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_HARD,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -660,6 +660,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNotNull(flagsIMS);
@@ -673,7 +674,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_HARD,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -766,6 +766,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNull(flagsIMS);
@@ -774,7 +775,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_UNKNOWN,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -871,6 +871,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         Set<String> flagsIMS = workloadInventoryReportModel.getFlagsIMS();
         Assert.assertNotNull(flagsIMS);
@@ -885,7 +886,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("tomcat")));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -974,6 +974,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -983,7 +984,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Red Hat JBoss EAP".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1072,6 +1072,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1081,7 +1082,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("IBM Websphere App Server".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1170,6 +1170,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1179,7 +1180,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Oracle Weblogic".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1268,6 +1268,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1277,7 +1278,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Oracle Database".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1366,6 +1366,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1375,7 +1376,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("SAP HANA".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1464,6 +1464,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1473,7 +1474,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Microsoft SQL Server".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1564,6 +1564,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1573,7 +1574,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Microsoft SQL Server".toLowerCase())));
         Assert.assertTrue(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
 
@@ -1667,6 +1667,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
@@ -1675,7 +1676,6 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertNotNull(workloadInventoryReportModel.getWorkloads());
         Assert.assertEquals(1, workloadInventoryReportModel.getWorkloads().size());
         Assert.assertTrue(workloadInventoryReportModel.getWorkloads().stream().anyMatch(workload -> workload.toLowerCase().contains("Microsoft SQL Server".toLowerCase())));
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 
     @Test
@@ -1768,12 +1768,12 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         Assert.assertEquals("VMware vCenter", workloadInventoryReportModel.getProduct());
         Assert.assertEquals("6.5", workloadInventoryReportModel.getVersion());
         Assert.assertEquals("esx13.v2v.bos.redhat.com", workloadInventoryReportModel.getHost_name());
+        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
         // Flags
         // Targets
         // Complexity
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_EASY,workloadInventoryReportModel.getComplexity());
         // Workloads
         Assert.assertFalse(workloadInventoryReportModel.getSsaEnabled());
-        Assert.assertEquals(new SimpleDateFormat("yyyy-M-dd'T'hh:mm:ss.S").parse("2019-09-18T14:52:45.871Z"), workloadInventoryReportModel.getCreationDate());
     }
 }
