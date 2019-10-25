@@ -14,12 +14,7 @@
         <rhdm.version>7.18.0.Final-redhat-00002</rhdm.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.thoughtworks.xstream</groupId>
-            <artifactId>xstream</artifactId>
-            <version>1.4.10</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.kie</groupId>
             <artifactId>kie-internal</artifactId>
@@ -32,12 +27,7 @@
             <version>${rhdm.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.optaplanner</groupId>
             <artifactId>optaplanner-persistence-jaxb</artifactId>
@@ -55,66 +45,6 @@
             <artifactId>javax.persistence-api</artifactId>
             <version>2.2</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-wb-scenario-simulation-editor-api</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-wb-scenario-simulation-editor-backend</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-compiler</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.kie</groupId>
-            <artifactId>kie-dmn-feel</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.kie</groupId>
-            <artifactId>kie-dmn-api</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.kie</groupId>
-            <artifactId>kie-dmn-core</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-core</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-canonical-model</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-model-compiler</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-decisiontables</artifactId>
-            <version>${rhdm.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
