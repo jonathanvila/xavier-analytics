@@ -14,5 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn test -B package --file pom.xml
-      run: curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json"  -H "Content-Type: application/json" https://api.github.com/repos/jonathanvila/xavier-integration/dispatches --data '{"event_type": "build_application"}'
+      run: |
+        mvn test -B package --file pom.xml
+        curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json"  -H "Content-Type: application/json" https://api.github.com/repos/jonathanvila/xavier-integration/dispatches --data '{"event_type": "build_application"}'
