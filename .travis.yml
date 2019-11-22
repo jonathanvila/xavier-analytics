@@ -16,7 +16,7 @@ jobs:
     - stage: Test
       script:
         - mvn test -Pcoverage
-        - if [env(TRAVIS_PULL_REQUEST) = false AND env(SONAR_TOKEN) IS present]; then sonar-scanner; fi
+        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" AND "$SONAR_TOKEN" != ""]; then sonar-scanner; fi'
         - bash <(curl -s https://codecov.io/bash)
     - stage: IntegrationTest
       script:
