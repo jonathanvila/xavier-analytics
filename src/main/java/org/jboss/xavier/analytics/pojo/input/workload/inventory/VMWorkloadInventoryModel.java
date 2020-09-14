@@ -6,9 +6,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
-public class VMWorkloadInventoryModel
-{
+public class VMWorkloadInventoryModel {
     //common/name
     private String provider;
     //common/ems_clusters/v_parent_datacenter
@@ -51,6 +49,7 @@ public class VMWorkloadInventoryModel
     private Integer balloonedMemory;
     private Boolean hasEncryptedDisk;
     private Boolean hasOpaqueNetwork;
+    private Boolean hasPassthroughDevice;
 
     public VMWorkloadInventoryModel() {
         this.systemServicesNames = new ArrayList<>();
@@ -98,6 +97,12 @@ public class VMWorkloadInventoryModel
 
     public void setHasVmDrsConfig(Boolean hasVmDrsConfig) {
         this.hasVmDrsConfig = hasVmDrsConfig;
+    public Boolean getHasPassthroughDevice() {
+        return hasPassthroughDevice;
+    }
+
+    public void setHasPassthroughDevice(Boolean hasPassthroughDevice) {
+        this.hasPassthroughDevice = hasPassthroughDevice;
     }
 
     public String getProvider() {

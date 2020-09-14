@@ -28,6 +28,7 @@ public class WorkloadInventoryReportModel
     public static final String ENCRYPTED_DISK_FLAG_NAME = "Encrypted Disk";
     public static final String OPAQUE_NETWORK_FLAG_NAME = "Opaque Network";
 
+    public static final String PASSTHROUGH_DEVICE_FLAG_NAME = "Passthrough Device";
 
     public static final String COMPLEXITY_EASY = "Easy";
     public static final String COMPLEXITY_MEDIUM = "Medium";
