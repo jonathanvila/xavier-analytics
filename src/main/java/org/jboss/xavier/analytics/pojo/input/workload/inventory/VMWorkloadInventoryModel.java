@@ -7,27 +7,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VMWorkloadInventoryModel {
-    //common/name
+    // common/name
     private String provider;
-    //common/ems_clusters/v_parent_datacenter
+    // common/ems_clusters/v_parent_datacenter
     private String datacenter;
-    //common/ems_clusters/name
+    // common/ems_clusters/name
     private String cluster;
-    //vms/name
+    // vms/name
     private String vmName;
-    //sum of vms/hardware/disks/size_on_disk
+    // sum of vms/hardware/disks/size_on_disk
     private Long diskSpace;
-    //vms/ram_size_in_bytes
+    // vms/ram_size_in_bytes
     private Long memory;
-    //vms/num_cpu
+    // vms/num_cpu
     private Integer cpuCores;
-    //vms/operating_system/product_name
+    // vms/operating_system/product_name
     private String osProductName;
-    //hardware/guest_os_full_name
+    // hardware/guest_os_full_name
     private String guestOSFullName;
-    //vms/has_rdm_disk
+    // vms/has_rdm_disk
     private boolean hasRdmDisk;
-    //count of nics object within the vms/hardware
+    // count of nics object within the vms/hardware
     private Integer nicsCount;
     private String product;
     private String version;
@@ -38,7 +38,7 @@ public class VMWorkloadInventoryModel {
 
     private Date scanRunDate;
 
-    //hardware/disks/filename
+    // hardware/disks/filename
     private Collection<String> vmDiskFilenames;
     private Collection<String> systemServicesNames;
     private Map<String, String> files;
@@ -52,6 +52,7 @@ public class VMWorkloadInventoryModel {
     private Boolean hasEncryptedDisk;
     private Boolean hasOpaqueNetwork;
     private Boolean hasPassthroughDevice;
+    private String firmware;
 
     public VMWorkloadInventoryModel() {
         this.systemServicesNames = new ArrayList<>();
@@ -59,6 +60,14 @@ public class VMWorkloadInventoryModel {
         this.vmDiskFilenames = new ArrayList<>();
         nicsCount = 0;
         diskSpace = new Long(0);
+    }
+
+    public String getFirmware() {
+        return firmware;
+    }
+
+    public void setFirmware(String firmware) {
+        this.firmware = firmware;
     }
 
     public Boolean getHasOpaqueNetwork() {
