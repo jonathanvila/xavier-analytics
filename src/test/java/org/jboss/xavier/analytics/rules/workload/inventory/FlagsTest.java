@@ -500,7 +500,7 @@ public class FlagsTest extends BaseTest {
         vmWorkloadInventoryModel.setBalloonedMemory(0);
         vmWorkloadInventoryModel.setHasEncryptedDisk(false);
         vmWorkloadInventoryModel.setHasOpaqueNetwork(false);
-        vmWorkloadInventoryModel.setHasVMAffinityConfig(true);
+        vmWorkloadInventoryModel.setHasVmAffinityConfig(true);
         facts.put("vmWorkloadInventoryModel", vmWorkloadInventoryModel);
 
         WorkloadInventoryReportModel workloadInventoryReportModel = new WorkloadInventoryReportModel();

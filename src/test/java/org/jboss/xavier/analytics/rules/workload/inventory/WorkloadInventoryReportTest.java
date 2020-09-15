@@ -436,7 +436,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         vmWorkloadInventoryModel.setNicsCount(5);
         vmWorkloadInventoryModel.setHasRdmDisk(true);
         vmWorkloadInventoryModel.setHasMemoryHotAdd(true);
-        vmWorkloadInventoryModel.setHasVMAffinityConfig(true);
+        vmWorkloadInventoryModel.setHasVmAffinityConfig(true);
         vmWorkloadInventoryModel.setNumaNodeAffinity("set");
         List<String> vmDiskFilenames = new ArrayList<>();
         vmDiskFilenames.add("/path/to/disk.vdmk");
