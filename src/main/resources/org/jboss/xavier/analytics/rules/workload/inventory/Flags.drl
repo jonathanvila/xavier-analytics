@@ -100,8 +100,8 @@ end
 rule "Flag_VM_Host_Affinity_Configured"
     when
         vmWorkloadInventoryModel : VMWorkloadInventoryModel(
-            hasVMAffinityConfig != null,
-            hasVMAffinityConfig == true
+            hasVmAffinityConfig != null,
+            hasVmAffinityConfig == true
 )
         workloadInventoryReport : WorkloadInventoryReportModel()
     then
