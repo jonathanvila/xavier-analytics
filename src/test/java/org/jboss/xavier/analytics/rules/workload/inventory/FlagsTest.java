@@ -17,7 +17,7 @@ public class FlagsTest extends BaseTest {
 
     public FlagsTest() {
         super("/org/jboss/xavier/analytics/rules/workload/inventory/Flags.drl", ResourceType.DRL,
-                "org.jboss.xavier.analytics.rules.workload.inventory", 6);
+                "org.jboss.xavier.analytics.rules.workload.inventory", 7);
     }
 
     @Test
@@ -354,7 +354,7 @@ public class FlagsTest extends BaseTest {
         facts.put("agendaGroup", "Flags");
 
         VMWorkloadInventoryModel vmWorkloadInventoryModel = new VMWorkloadInventoryModel();
-        vmWorkloadInventoryModel.setCpuAffinityNotNull(true);
+        vmWorkloadInventoryModel.setCpuAffinity(true);
         facts.put("vmWorkloadInventoryModel", vmWorkloadInventoryModel);
 
         WorkloadInventoryReportModel workloadInventoryReportModel = new WorkloadInventoryReportModel();
@@ -461,6 +461,7 @@ public class FlagsTest extends BaseTest {
         vmWorkloadInventoryModel.setBalloonedMemory(1000);
         vmWorkloadInventoryModel.setHasEncryptedDisk(true);
         vmWorkloadInventoryModel.setHasOpaqueNetwork(true);
+        vmWorkloadInventoryModel.setNumaNodeAffinity("set");
         facts.put("vmWorkloadInventoryModel", vmWorkloadInventoryModel);
 
         WorkloadInventoryReportModel workloadInventoryReportModel = new WorkloadInventoryReportModel();
@@ -470,6 +471,8 @@ public class FlagsTest extends BaseTest {
         Assert.assertEquals(2, results.get(NUMBER_OF_FIRED_RULE_KEY));
         Utils.verifyRulesFiredNames(this.agendaEventListener, "AgendaFocusForTest", "Flag_Opaque_Network", "Flag_Encrypted_Disk", "Flag_Ballooned_Memory", "Flag_VM_HA_Config", "Flag_VM_DRS_Config");
       
+        Utils.verifyRulesFiredNames(this.agendaEventListener, "AgendaFocusForTest", "Flag_Numa_Node_Affinity");
+
         List<WorkloadInventoryReportModel> reports = Utils.extractModels(GET_OBJECTS_KEY, results, WorkloadInventoryReportModel.class);
         // just one report has to be created
         Assert.assertEquals(1, reports.size());
@@ -483,7 +486,10 @@ public class FlagsTest extends BaseTest {
         Assert.assertTrue(flagsIMS.contains(WorkloadInventoryReportModel.OPAQUE_NETWORK_FLAG_NAME));
     }    
     
-    public void test_VMDRS_VMHA_BALLOONEDMEM_ENCRYPTEDDISK_OPAQUENETWORK_false() {
+
+    @Test
+    public void test_VmHostAffinityConfigured()
+    {
         Map<String, Object> facts = new HashMap<>();
         // always add a String fact with the name of the agenda group defined in the DRL file (e.g. "SourceCosts")
         facts.put("agendaGroup", "Flags");
@@ -494,6 +500,7 @@ public class FlagsTest extends BaseTest {
         vmWorkloadInventoryModel.setBalloonedMemory(0);
         vmWorkloadInventoryModel.setHasEncryptedDisk(false);
         vmWorkloadInventoryModel.setHasOpaqueNetwork(false);
+        vmWorkloadInventoryModel.setHasVMAffinityConfig(true);
         facts.put("vmWorkloadInventoryModel", vmWorkloadInventoryModel);
 
         WorkloadInventoryReportModel workloadInventoryReportModel = new WorkloadInventoryReportModel();
@@ -503,6 +510,8 @@ public class FlagsTest extends BaseTest {
         Assert.assertEquals(2, results.get(NUMBER_OF_FIRED_RULE_KEY));
         Utils.verifyRulesFiredNames(this.agendaEventListener, "AgendaFocusForTest");
       
+        Utils.verifyRulesFiredNames(this.agendaEventListener, "AgendaFocusForTest", "Flag_VM_Host_Affinity_Configured");
+
         List<WorkloadInventoryReportModel> reports = Utils.extractModels(GET_OBJECTS_KEY, results, WorkloadInventoryReportModel.class);
         // just one report has to be created
         Assert.assertEquals(1, reports.size());
@@ -535,6 +544,7 @@ public class FlagsTest extends BaseTest {
         // just one report has to be created
         Assert.assertEquals(1, reports.size());
         WorkloadInventoryReportModel report = reports.get(0);
+        
         Set<String> flagsIMS = report.getFlagsIMS();
         Assert.assertEquals(0, flagsIMS.size());
     }

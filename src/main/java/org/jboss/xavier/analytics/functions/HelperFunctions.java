@@ -105,7 +105,9 @@ public class HelperFunctions
         BALLOONED_MEMORY(WorkloadInventoryReportModel.BALLOONED_MEMORY_FLAG_NAME, true, true),
         ENCRYPTED_DISK(WorkloadInventoryReportModel.ENCRYPTED_DISK_FLAG_NAME, true, true),
         OPAQUE_NETWORK(WorkloadInventoryReportModel.OPAQUE_NETWORK_FLAG_NAME, true, true),
-        HAS_PASSTHROUGH_DEVICE(WorkloadInventoryReportModel.PASSTHROUGH_DEVICE_FLAG_NAME, false, true);
+        HAS_PASSTHROUGH_DEVICE(WorkloadInventoryReportModel.PASSTHROUGH_DEVICE_FLAG_NAME, false, true),
+        VM_AFFINITY_CONFIG(WorkloadInventoryReportModel.VM_HOST_AFFINITY_CONFIGURED_FLAG_NAME, false, true),
+        NUMA_NODE_AFFINITY(WorkloadInventoryReportModel.NUMA_NODE_AFFINITY_FLAG_NAME, false, true);
 
         private final String name;
         private final boolean isUnsuitableForOSP;

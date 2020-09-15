@@ -29,6 +29,8 @@ public class WorkloadInventoryReportModel
     public static final String OPAQUE_NETWORK_FLAG_NAME = "Opaque Network";
 
     public static final String PASSTHROUGH_DEVICE_FLAG_NAME = "Passthrough Device";
+    public static final String VM_HOST_AFFINITY_CONFIGURED_FLAG_NAME = "VM/Host Affinity Configured";
+    public static final String NUMA_NODE_AFFINITY_FLAG_NAME = "Numa Node Affinity";
 
     public static final String COMPLEXITY_EASY = "Easy";
     public static final String COMPLEXITY_MEDIUM = "Medium";
