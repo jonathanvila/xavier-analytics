@@ -1,6 +1,5 @@
 package org.jboss.xavier.analytics.pojo.input.workload.inventory;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -48,13 +47,22 @@ public class VMWorkloadInventoryModel
     private Boolean hasCpuHotAdd;
     private Boolean hasCpuHotRemove;
 
-    public VMWorkloadInventoryModel()
-    {
+    private Boolean hasUSBcontrollers;
+
+    public VMWorkloadInventoryModel() {
         this.systemServicesNames = new ArrayList<>();
         this.files = new HashMap<>();
         this.vmDiskFilenames = new ArrayList<>();
         nicsCount = 0;
         diskSpace = new Long(0);
+    }
+
+    public Boolean getHasUSBcontrollers() {
+        return hasUSBcontrollers;
+    }
+
+    public void setHasUSBcontrollers(Boolean hasUSBcontrollers) {
+        this.hasUSBcontrollers = hasUSBcontrollers;
     }
 
     public String getProvider() {
