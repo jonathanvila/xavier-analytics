@@ -284,8 +284,8 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
         // Targets
         Set<String> targets = workloadInventoryReportModel.getRecommendedTargetsIMS();
         Assert.assertEquals(2, targets.size());
-        Assert.assertTrue(targets.contains("RHV"));
-        Assert.assertTrue(targets.contains("OSP"));
+        Assert.assertTrue(targets.contains("Red Hat Virtualization"));
+        Assert.assertTrue(targets.contains("Red Hat OpenStack Platform"));
         // Complexity
         Assert.assertEquals(WorkloadInventoryReportModel.COMPLEXITY_MEDIUM, workloadInventoryReportModel.getComplexity());
         // Workloads
