@@ -27,7 +27,7 @@ public class WorkloadInventoryReportModel
     public static final String BALLOONED_MEMORY_FLAG_NAME = "Ballooned memory";
     public static final String ENCRYPTED_DISK_FLAG_NAME = "Encrypted Disk";
     public static final String OPAQUE_NETWORK_FLAG_NAME = "Opaque Network";
-
+    public static final String PASSTHROUGH_DEVICE_FLAG_NAME = "Passthrough Device";
 
     public static final String COMPLEXITY_EASY = "Easy";
     public static final String COMPLEXITY_MEDIUM = "Medium";
@@ -42,7 +42,10 @@ public class WorkloadInventoryReportModel
     public static final Boolean INSIGHTS_ENABLED_DEFAULT_VALUE = false;
     public static final String OS_FAMILY_DEFAULT_VALUE = "Other";
 
-    public static final String TARGET_OCP = "OCP";
+    public static final String TARGET_RHV = "Red Hat Virtualization";
+    public static final String TARGET_OSP = "Red Hat OpenStack Platform";
+    public static final String TARGET_RHEL = "Red Hat Enterprise Linux";
+    public static final String TARGET_OCP = "Red Hat OpenShift Virtualization";
 
     @Id
     @GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "WORKLOADINVENTORYREPORTMODEL_ID_GENERATOR")
