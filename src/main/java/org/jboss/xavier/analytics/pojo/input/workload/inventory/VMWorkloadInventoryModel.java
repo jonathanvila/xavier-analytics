@@ -98,6 +98,7 @@ public class VMWorkloadInventoryModel {
 
     public void setHasVmDrsConfig(Boolean hasVmDrsConfig) {
         this.hasVmDrsConfig = hasVmDrsConfig;
+    }
 
     public Boolean getHasPassthroughDevice() {
         return hasPassthroughDevice;
