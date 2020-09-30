@@ -5016,7 +5016,7 @@ public class WorkloadInventoryReportTest extends BaseIntegrationTest {
                 "Target_RHEL",
                 "Target_RedHatJBossEAP",
                 // Complexity
-                "One_Or_More_Flags_Convertible_OS",
+                "One_Or_More_Flags_Convertible_OS"
                 );
 
         // retrieve the QueryResults that was available in the working memory from the results
