@@ -6,9 +6,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
-public class VMWorkloadInventoryModel
-{
+public class VMWorkloadInventoryModel {
     //common/name
     private String provider;
     //common/ems_clusters/v_parent_datacenter
@@ -34,7 +32,10 @@ public class VMWorkloadInventoryModel
     private String product;
     private String version;
     private String host_name;
-    private boolean cpuAffinityNotNull;
+    private String firmware;
+    private Boolean cpuAffinity;
+    private String numaNodeAffinity;
+    private Boolean hasVmAffinityConfig;
 
     private Date scanRunDate;
 
@@ -48,6 +49,12 @@ public class VMWorkloadInventoryModel
     private Boolean hasCpuHotRemove;
 
     private Boolean hasUSBcontrollers;
+    private Boolean hasVmDrsConfig;
+    private Boolean hasVmHaConfig;
+    private Integer balloonedMemory;
+    private Boolean hasEncryptedDisk;
+    private Boolean hasOpaqueNetwork;
+    private Boolean hasPassthroughDevice;
 
     public VMWorkloadInventoryModel() {
         this.systemServicesNames = new ArrayList<>();
@@ -57,12 +64,61 @@ public class VMWorkloadInventoryModel
         diskSpace = new Long(0);
     }
 
+
     public Boolean getHasUSBcontrollers() {
         return hasUSBcontrollers;
     }
 
     public void setHasUSBcontrollers(Boolean hasUSBcontrollers) {
         this.hasUSBcontrollers = hasUSBcontrollers;
+    }
+
+    public Boolean getHasOpaqueNetwork() {
+        return hasOpaqueNetwork;
+    }
+
+    public void setHasOpaqueNetwork(Boolean hasOpaqueNetwork) {
+        this.hasOpaqueNetwork = hasOpaqueNetwork;
+    }
+
+    public Boolean getHasEncryptedDisk() {
+        return hasEncryptedDisk;
+    }
+
+    public void setHasEncryptedDisk(Boolean hasEncryptedDisk) {
+        this.hasEncryptedDisk = hasEncryptedDisk;
+    }
+
+    public Integer getBalloonedMemory() {
+        return balloonedMemory;
+    }
+
+    public void setBalloonedMemory(Integer balloonedMemory) {
+        this.balloonedMemory = balloonedMemory;
+    }
+
+    public Boolean getHasVmHaConfig() {
+        return hasVmHaConfig;
+    }
+
+    public void setHasVmHaConfig(Boolean hasVmHaConfig) {
+        this.hasVmHaConfig = hasVmHaConfig;
+    }
+
+    public Boolean getHasVmDrsConfig() {
+        return hasVmDrsConfig;
+    }
+
+    public void setHasVmDrsConfig(Boolean hasVmDrsConfig) {
+        this.hasVmDrsConfig = hasVmDrsConfig;
+    }
+
+    public Boolean getHasPassthroughDevice() {
+        return hasPassthroughDevice;
+    }
+
+    public void setHasPassthroughDevice(Boolean hasPassthroughDevice) {
+        this.hasPassthroughDevice = hasPassthroughDevice;
     }
 
     public String getProvider() {
@@ -255,11 +311,35 @@ public class VMWorkloadInventoryModel
     }
 
 
-    public boolean isCpuAffinityNotNull() {
-        return cpuAffinityNotNull;
+    public Boolean getCpuAffinity() {
+        return cpuAffinity;
     }
 
-    public void setCpuAffinityNotNull(boolean cpuAffinityNotNull) {
-        this.cpuAffinityNotNull = cpuAffinityNotNull;
+    public void setCpuAffinity(Boolean cpuAffinity) {
+        this.cpuAffinity = cpuAffinity;
+    }
+
+    public String getNumaNodeAffinity() {
+        return numaNodeAffinity;
+    }
+
+    public void setNumaNodeAffinity(String numaNodeAffinity) {
+        this.numaNodeAffinity = numaNodeAffinity;
+    }
+
+    public Boolean getHasVmAffinityConfig() {
+        return hasVmAffinityConfig;
+    }
+
+    public void setHasVmAffinityConfig(Boolean hasVmAffinityConfig) {
+        this.hasVmAffinityConfig = hasVmAffinityConfig;
+    }
+
+    public String getFirmware() {
+        return firmware;
+    }
+
+    public void setFirmware(String firmware) {
+        this.firmware = firmware;
     }
 }
